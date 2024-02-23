@@ -1,0 +1,79 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand la-brand" routerLink="/" aria-current="page">
+                <img src="https://la.ua/wp-content/themes/lapiec/assets/frontend/img/logo-normalna.svg" alt="">
+            </a>
+            <button routerLink="/" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a routerLink="/discount" routerLinkActive="route-active" class="nav-link">Акції</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/product/pizza" routerLinkActive="route-active" class="nav-link">Піца</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/product/salads" routerLinkActive="route-active" class="nav-link">Салати</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/product/desserts" routerLinkActive="route-active" class="nav-link">Десерти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/product/drinks" routerLinkActive="route-active" class="nav-link">Напої</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Інформація
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a routerLink="/delivery" routerLinkActive="route-active"
+                                    class="dropdown-item">Доставка</a>
+                            </li>
+                            <li>
+                                <a routerLink="/payment" routerLinkActive="route-active"
+                                    class="dropdown-item">Оплата</a>
+                            </li>
+                            <li>
+                                <a routerLink="/about" routerLinkActive="route-active" class="dropdown-item">Про нас</a>
+                            </li>
+                            <li>
+                                <a routerLink="/news" routerLinkActive="route-active" class="dropdown-item">Новини</a>
+                            </li>
+                            <li>
+                                <a routerLink="/offerta" routerLinkActive="route-active"
+                                    class="dropdown-item">Оферта</a>
+                            </li>
+                            <li>
+                                <a routerLink="/partners" routerLinkActive="route-active" class="dropdown-item">Для
+                                    партнерів</a>
+                            </li>
+                            <li>
+                                <a routerLink="/contact" routerLinkActive="route-active"
+                                    class="dropdown-item">Контакти</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/checkout" routerLinkActive="route-active" class="nav-link basket"
+                            aria-current="page">
+                            <img src="https://la.ua/wp-content/themes/lapiec/assets/frontend/img/icons/shopping-cart.svg"
+                                alt="">
+                            <span>0 грн</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/admin" routerLinkActive="route-active" class="nav-link"
+                            aria-current="page">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

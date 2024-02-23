@@ -1,0 +1,61 @@
+
+<div class="container-fluid">
+
+
+    <div class="row ">
+        <div class="col-4">
+            <form>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea [(ngModel)]="description" name="description" id="description" class="form-control"
+                        placeholder="Description here.."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="imagePath" class="form-label">Image</label>
+                    <input [(ngModel)]="imagePath" name="imagePath" type="text" class="form-control" id="imagePath"
+                        readonly>
+                </div>
+                @if(!editStatus){
+                    <button [disabled]="!description" type="button" class="btn btn-success w-100"
+                    (click)="addDiscount()">Add</button>
+                }
+                @if(editStatus){
+                    <button [disabled]="!description" type="button" class="btn btn-info w-100"
+                    (click)="saveDiscount()">Save</button> 
+                }
+            </form>
+        </div>
+        <div class="col-7">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (discount of adminDiscounts; track $index) {
+                    <tr>
+                        <td>{{ discount.id }}</td>
+                        <td>
+                            {{ discount.description | slice:0:70 }}
+                            <span *ngIf="discount.description.length > 70">...</span>
+                        </td>
+                        <td>
+                            <img [src]="discount.imagePath" alt="" height="50px">
+                        </td>
+                        <td>
+                            <button (click)="editDiscount(discount)" type="button" class="btn btn-secondary me-2">Edit</button>
+                            <button [disabled]="editStatus" (click)="deleteDiscount(discount)" type="button" class="btn btn-danger ">Delete</button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+   

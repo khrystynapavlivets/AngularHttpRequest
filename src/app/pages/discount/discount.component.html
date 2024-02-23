@@ -1,0 +1,26 @@
+<div class="container mt-3 mb-3">
+    <div class="row">
+        @if(userDiscounts.length > 0){
+        @for( discount of userDiscounts;track $index)
+        {
+        <div class="col-6 mt-3">
+            <div class="card w-100">
+                <img [src]="discount.imagePath" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <a class="btn btn-warning">Детальніше</a>
+                </div>
+            </div>
+        </div>
+        }
+        }
+        @if(userDiscounts.length === 0){
+        <div class="card text-center">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <h1 class="text-center">Discounts not added yet</h1>
+            </div>
+            <div class="card-footer text-muted"></div>
+        </div>
+        }
+    </div>
+</div>

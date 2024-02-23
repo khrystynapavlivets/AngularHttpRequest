@@ -1,0 +1,17 @@
+<div class="d-flex align-items-start">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link" [routerLink]="[ 'category' ]" routerLinkActive="active"
+                type="button">Category</button>
+            <button class="nav-link" [routerLink]="[ 'product' ]" routerLinkActive="active"
+                type="button">Product</button>
+            <button class="nav-link" [routerLink]="[ 'discount' ]" routerLinkActive="active"
+                type="button">Discount</button>
+            <button class="nav-link" [routerLink]="[ 'news' ]" routerLinkActive="active" type="button">News</button>
+            <button class="nav-link" [routerLink]="[ 'order' ]" routerLinkActive="active" type="button">Order</button>
+        </div>
+        <div class="tab-content w-100" id="v-pills-tabContent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

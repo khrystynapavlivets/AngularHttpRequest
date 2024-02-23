@@ -1,0 +1,14 @@
+@import '../shared/styles/variables';
+
+.navbar-nav .nav-link {
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+}
+
+.active {
+    // border: 2px solid $primary;
+    border-radius: 5px;
+    background-color: blue;
+    color: red;
+}
